@@ -22,8 +22,8 @@ jobs:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=johan-ortega118
-          -Dsonar.projectKey=Johan-Ortega118_holamundoReact
+          -Dsonar.organization=denisags
+          -Dsonar.projectKey=DenisAGS_React_App
   security:
     runs-on: ubuntu-latest
     needs: build
