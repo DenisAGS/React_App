@@ -38,7 +38,7 @@ jobs:
   zap_scan:
     runs-on: ubuntu-latest
     needs: security
-    name: Scan the web application
+    name: Run DAST scan on the web application
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -71,7 +71,7 @@ jobs:
         uses: SpicyPizza/create-envfile@v1.3
         with:
           envkey_NG_APP_KEY : ${{ secrets.OPENAI_KEY }}
-          file_name: .env
+          file_name: ${{ secrets.NG_APP_KEY }}
           fail_on_empty: false
           
       - name: build angular, output in dist/openai
