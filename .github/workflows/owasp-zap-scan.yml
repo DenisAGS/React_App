@@ -13,9 +13,8 @@ jobs:
           ref: release
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.6.1
-        continue-on-error: true
         with:
           docker_name: 'owasp/zap2docker-stable'
-          target: 'http://testphp.vulnweb.com/'
+          target: 'https://resnet-service-santostesina-denisags.cloud.okteto.net/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
